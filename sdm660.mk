@@ -132,7 +132,7 @@ PRODUCT_COPY_FILES += \
 
 # Biometrics
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_wayne
+    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sdm660
 
 PRODUCT_PACKAGES += \
     IFAAService \
@@ -287,7 +287,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_wayne
+    android.hardware.light@2.0-service.xiaomi_sdm660
 
 # LiveDisplay native
 PRODUCT_PACKAGES += \
