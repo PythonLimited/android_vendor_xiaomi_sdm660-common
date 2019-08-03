@@ -21,6 +21,24 @@
 
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
+
+#include <cutils/properties.h>
+#include <string.h>
+
+static inline const char* BtmGetDefaultName()
+{
+    char product_model[PROPERTY_VALUE_MAX];
+    char *model = NULL;;
+    property_get("ro.product.model", product_model, "");
+
+    strcat(model, product_model);
+    return model;
+}
+#undef PROPERTY_VALUE_MAX
+
+#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
+#define BLUETOOTH_QTI_SW TRUE
+
 // Disables read remote device feature
 #define MAX_ACL_CONNECTIONS   16
 #define MAX_L2CAP_CHANNELS    16
